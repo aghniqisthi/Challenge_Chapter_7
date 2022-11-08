@@ -1,17 +1,17 @@
 package com.example.challengechapter7.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.challengechapter7.model.ResponseDataProductItem
-import com.example.challengechapter7.network.RestfulAPIProduct
-import dagger.hilt.android.lifecycle.HiltViewModel
+import com.example.challengechapter7.network.RetrofitClientProduct
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-@HiltViewModel
-class ViewModelProduct @Inject constructor(var api: RestfulAPIProduct) : ViewModel() {
+class ViewModelProduct (application: Application) : AndroidViewModel(application) {
     var liveDataProduct : MutableLiveData<List<ResponseDataProductItem>>
 
     init {
@@ -22,7 +22,7 @@ class ViewModelProduct @Inject constructor(var api: RestfulAPIProduct) : ViewMod
     }
 
     fun callApiProduct(){
-        api.getAllProduct().enqueue(object :
+        RetrofitClientProduct.instance.getAllProduct().enqueue(object :
             Callback<List<ResponseDataProductItem>> {
             override fun onResponse(call: Call<List<ResponseDataProductItem>>, response: Response<List<ResponseDataProductItem>>) {
                 if (response.isSuccessful){

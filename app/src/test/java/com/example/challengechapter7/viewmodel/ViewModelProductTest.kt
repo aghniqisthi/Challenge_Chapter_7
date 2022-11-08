@@ -1,7 +1,7 @@
 package com.example.challengechapter7.viewmodel
 
-import com.example.challengechapter7.model.ResponseDataProductItem
-import com.example.challengechapter7.network.RestfulAPIProduct
+import com.example.challengechapter7.marcelle.model.ResponseDataProductItem
+import com.example.challengechapter7.marcelle.network.RestfulAPIProduct
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify

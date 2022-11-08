@@ -1,9 +1,9 @@
 package com.example.challengechapter7.viewmodel
 
-import com.example.challengechapter7.model.ResponseDataUserItem
-import com.example.challengechapter7.model.User
-import com.example.challengechapter7.model.UserEdit
-import com.example.challengechapter7.network.RestfulAPIUser
+import com.example.challengechapter7.marcelle.model.ResponseDataUserItem
+import com.example.challengechapter7.marcelle.model.User
+import com.example.challengechapter7.marcelle.model.UserEdit
+import com.example.challengechapter7.marcelle.network.RestfulAPIUser
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify

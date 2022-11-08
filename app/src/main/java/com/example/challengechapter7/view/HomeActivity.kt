@@ -16,9 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
@@ -61,8 +59,8 @@ class HomeActivity : AppCompatActivity() {
         })
         viewModelProduct.getliveDataProduct().observe(this, Observer {
             if (it != null) {
-                binding.rvProduct.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-                binding.rvProduct.adapter = ProductAdapter(it)
+                binding.rvProductMarcelle.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                binding.rvProductMarcelle.adapter = ProductAdapter(it)
             } else {
                 Toast.makeText(this, "There is no data to show", Toast.LENGTH_SHORT).show()
             }

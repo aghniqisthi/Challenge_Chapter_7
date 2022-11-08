@@ -1,8 +1,8 @@
 package com.example.challengechapter7.viewmodel
 
-import com.example.challengechapter7.model.Cart
-import com.example.challengechapter7.model.ResponseDataCartItem
-import com.example.challengechapter7.network.RestfulAPICart
+import com.example.challengechapter7.marcelle.model.Cart
+import com.example.challengechapter7.marcelle.model.ResponseDataCartItem
+import com.example.challengechapter7.marcelle.network.RestfulAPICart
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify

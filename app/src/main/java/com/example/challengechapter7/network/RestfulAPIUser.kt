@@ -15,5 +15,6 @@ interface RestfulAPIUser {
 
     @PUT("users/{id}")
     fun putUser(@Path("id") id:Int,
-                @Body request: UserEdit) : Call<List<ResponseDataUserItem>>
+                @Body request: UserEdit
+    ) : Call<List<ResponseDataUserItem>>
 }

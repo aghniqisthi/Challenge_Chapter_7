@@ -10,11 +10,17 @@ import androidx.work.workDataOf
 class SaveImageToFileWorker (context: Context, workerParameters: WorkerParameters) : Worker(context, workerParameters) {
     override fun doWork(): Result {
         // Show a Notification when the work starts
-        makeStatusNotification("Saving Image...", applicationContext)
+        com.example.challengechapter7.marcelle.workers.makeStatusNotification(
+            "Saving Image...",
+            applicationContext
+        )
 
         return try {
             // Try saving the image to MediaStore filesystem
-            saveImageToMedia(applicationContext, inputData.getString(KEY_IMAGE_URI))?.let { imageUriStr: String ->
+            com.example.challengechapter7.marcelle.workers.saveImageToMedia(
+                applicationContext,
+                inputData.getString(KEY_IMAGE_URI)
+            )?.let { imageUriStr: String ->
                 // On Success
                 // Return as successful with the output Data containing the Uri
                 // to the permanently saved blurred image file, in order to make it available

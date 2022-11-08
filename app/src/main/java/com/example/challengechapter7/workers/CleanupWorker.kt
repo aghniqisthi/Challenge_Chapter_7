@@ -9,12 +9,15 @@ import androidx.work.WorkerParameters
 class CleanupWorker (context: Context, workerParameters: WorkerParameters) : Worker(context, workerParameters) {
     override fun doWork(): Result {
         // Show a Notification when the work starts
-        makeStatusNotification("Cleaning up old temporary files", applicationContext)
+        com.example.challengechapter7.marcelle.workers.makeStatusNotification(
+            "Cleaning up old temporary files",
+            applicationContext
+        )
         // Slow down the start so that it is easier to see each WorkRequest start
 
         return try {
             // Clean up any temporary image files if present
-            cleanUpTempFiles(applicationContext)
+            com.example.challengechapter7.marcelle.workers.cleanUpTempFiles(applicationContext)
             // Return as successful
             Result.success()
         } catch (throwable: Throwable) {

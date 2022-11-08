@@ -1,7 +1,7 @@
 package com.example.challengechapter7.model
 
-
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class ResponseDataProductItem(
     @SerializedName("api_featured_image")
@@ -42,4 +42,4 @@ data class ResponseDataProductItem(
     val updatedAt: String,
     @SerializedName("website_link")
     val websiteLink: String
-)
+) : Serializable

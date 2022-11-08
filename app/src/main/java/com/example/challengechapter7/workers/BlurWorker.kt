@@ -15,7 +15,10 @@ class BlurWorker (context : Context, params : WorkerParameters): Worker(context,
         val resourceUri = inputData.getString(KEY_IMAGE_URI)
 
 //        show notification
-        makeStatusNotification("Blurring image", appContext)
+        com.example.challengechapter7.marcelle.workers.makeStatusNotification(
+            "Blurring image",
+            appContext
+        )
 
         return try {
 //            make sure ResourceUri from data is not empty
@@ -29,10 +32,12 @@ class BlurWorker (context : Context, params : WorkerParameters): Worker(context,
             val picture = BitmapFactory.decodeStream(resolver.openInputStream(Uri.parse(resourceUri)))
 
 //            nge blurin image - get versi blur bitmap
-            val output = blurBitmap(picture, appContext)
+            val output =
+                com.example.challengechapter7.marcelle.workers.blurBitmap(picture, appContext)
 
             // Write bitmap to a temp file
-            val outputUri = writeBitmapToFile(appContext, output)
+            val outputUri =
+                com.example.challengechapter7.marcelle.workers.writeBitmapToFile(appContext, output)
 
 //            buat output URI sementara, agar dapat diakses untuk proses selanjutnya
             val outputData = workDataOf(KEY_IMAGE_URI to outputUri.toString())

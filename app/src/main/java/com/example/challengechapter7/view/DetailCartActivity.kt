@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.challengechapter7.databinding.ActivityCartBinding
 import com.example.challengechapter7.databinding.ActivityDetailCartBinding
 import com.example.challengechapter7.model.ResponseDataCartItem
 import com.example.challengechapter7.viewmodel.ViewModelCart
