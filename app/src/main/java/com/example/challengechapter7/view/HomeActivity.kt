@@ -59,8 +59,8 @@ class HomeActivity : AppCompatActivity() {
         })
         viewModelProduct.getliveDataProduct().observe(this, Observer {
             if (it != null) {
-                binding.rvProductMarcelle.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-                binding.rvProductMarcelle.adapter = ProductAdapter(it)
+                binding.rvProduct.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                binding.rvProduct.adapter = ProductAdapter(it)
             } else {
                 Toast.makeText(this, "There is no data to show", Toast.LENGTH_SHORT).show()
             }

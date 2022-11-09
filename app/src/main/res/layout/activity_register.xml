@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".marcelle.view.RegisterActivity">
+    tools:context=".view.RegisterActivity">
     <ScrollView
         android:layout_marginVertical="@dimen/margin"
         android:layout_width="match_parent"

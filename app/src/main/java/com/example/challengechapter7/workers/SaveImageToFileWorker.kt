@@ -10,14 +10,14 @@ import androidx.work.workDataOf
 class SaveImageToFileWorker (context: Context, workerParameters: WorkerParameters) : Worker(context, workerParameters) {
     override fun doWork(): Result {
         // Show a Notification when the work starts
-        com.example.challengechapter7.marcelle.workers.makeStatusNotification(
+        makeStatusNotification(
             "Saving Image...",
             applicationContext
         )
 
         return try {
             // Try saving the image to MediaStore filesystem
-            com.example.challengechapter7.marcelle.workers.saveImageToMedia(
+            saveImageToMedia(
                 applicationContext,
                 inputData.getString(KEY_IMAGE_URI)
             )?.let { imageUriStr: String ->
