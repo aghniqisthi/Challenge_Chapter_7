@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/light_bg"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="#f2efe2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -57,11 +58,13 @@
             </RelativeLayout>
 
             <TextView
-                style="@style/title"
                 android:id="@+id/textHOMEEE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:fontFamily="sans-serif-black"
                 android:text="Marcelle"
+                android:textColor="#9e94d8"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
